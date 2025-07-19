@@ -82,7 +82,6 @@ if(isLoading || isRefetching || comming) return <div style={{height:"100vh",disp
      </div>
     
      
-   
      {/* <div className="posts">
       {data.map((val,index)=>
             <UsersPost key={index} all={val} state={state}/>
