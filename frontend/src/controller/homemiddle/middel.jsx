@@ -79,14 +79,14 @@ if(isLoading || isRefetching || comming) return <div style={{height:"100vh",disp
       <Createpost />
       
      </div>
-     {console.log("data length",data.length)}
-     {data && data.length<1 ? <div className='notfound'>Not found data</div>:
+     {console.log("data length",data)}
+     
    
      <div className="posts">
       {data.map((val,index)=>
             <UsersPost key={index} all={val} state={state}/>
             )}
-     </div>}
+     </div>
      </div>
  
     </div>
