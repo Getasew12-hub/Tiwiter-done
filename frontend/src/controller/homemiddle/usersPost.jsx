@@ -195,12 +195,12 @@ console.log("all post", pro.all);
         
       </div>
      <div className="postText">  <p>{pro.all.text}</p></div>
-      {/* {pro.all.img && ( */}
-        // <div className="PostImag">
-        //   <img src={pro.all.img} alt="Post" />{" "}
-        //   {/* Added alt prop for accessibility */}
-        // </div>
-      {/* // )} */}
+      {pro.all.img && (
+        <div className="PostImag">
+          <img src={pro.all.img} alt="Post" />{" "}
+          {/* Added alt prop for accessibility */}
+        </div>
+      )}
       <div className="Response">
         {/* <p>
           <ChatBubbleOutlineIcon style={{cursor:"pointer"}} onClick={()=>CommentShow(pro.all.id)} /> {pro.all.comment && pro.all.comment}
