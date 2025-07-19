@@ -181,27 +181,27 @@ console.log("all post", pro.all);
   return (
     <div className="allPosts-container">
     <div className="userProfile">
-      {/* <NavLink to={`/profile/${pro.all.user.userid}`}>   {pro.all.user.profileimg ? (
+      <NavLink to={`/profile/${pro.all.user.userid}`}>   {pro.all.user.profileimg ? (
           <img src={pro.all.user.profileimg} alt="Profile" /> // Added alt prop for accessibility
         ) : (
           <div className="img">{pro.all.user.fullname.slice(0, 1)}</div>
-        )}</NavLink>  */}
-        {/* <div>
+        )}</NavLink> 
+        <div>
           <p className="name">
             {pro.all.user.fullname} <span>{pro.all.user.username}</span>
           </p>
          
-        </div> */}
+        </div>
         
       </div>
-     {/* <div className="postText">  <p>{pro.all.text}</p></div> */}
-      {/* {pro.all.img && ( */}
-        {/* <div className="PostImag"> */}
-          {/* <img src={pro.all.img} alt="Post" />{" "} */}
+     <div className="postText">  <p>{pro.all.text}</p></div>
+      {pro.all.img && (
+        <div className="PostImag">
+          <img src={pro.all.img} alt="Post" />{" "}
           {/* Added alt prop for accessibility */}
-        {/* </div> */}
-      {/* )} */}
-      {/* <div className="Response">
+        </div>
+      )}
+      <div className="Response">
         <p>
           <ChatBubbleOutlineIcon style={{cursor:"pointer"}} onClick={()=>CommentShow(pro.all.id)} /> {pro.all.comment && pro.all.comment}
         </p>
@@ -265,8 +265,8 @@ console.log("all post", pro.all);
             <p>Loading...</p>
           )}
         </div>
-      </div> */}
-     {/* <div className="modal-overlay" ref={Comment}  id={pro.all.id}>
+      </div>
+     <div className="modal-overlay" ref={Comment}  id={pro.all.id}>
       <div className="comment-containerforuser"   >
         <div className="discription">
           <ClearIcon className="clear"onClick={()=> Comment.current.style.visibility="hidden"}/>
@@ -313,8 +313,8 @@ console.log("all post", pro.all);
           </form>
         </div>
       </div>
-      </div> */}
-hi
+      </div>
+
     </div>
   );
 }
