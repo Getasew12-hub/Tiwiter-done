@@ -19,27 +19,19 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
   const app=express();
 // const __dirname=path.resolve();
 app.use(session({
-    secret: process.env.SESSION_SECRET || "a_strong_fallback_secret_for_local_dev_only", // <-- IMPORTANT: Use environment variable here!
-    resave: false,
-    saveUninitialized: false,
-    name: "usercome",
-    cookie: {
-        maxAge: 24 * 15 * 60 * 60 * 1000, // 15 days
-        path: "/",
-        // *** CRITICAL FOR PRODUCTION DEPLOYMENTS (HTTPS) ***
-        // `secure: true` means the cookie is ONLY sent over HTTPS.
-        // Render uses HTTPS, so this MUST be true in production.
-        secure: process.env.NODE_ENV === 'production',
-        // `sameSite: 'none'` allows cross-site cookies, required when frontend and backend
-        // are on different subdomains/domains (even if hosted on the same Render URL).
-        // It REQUIRES `secure: true`. Use 'lax' for local development.
-        sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
+    secret:"TOPSECTER",
+    resave:false,
+    saveUninitialized:false,
+    name:"usercome",
+    cookie:{
+        maxAge:24*15*60*60*1000,
+        path:"/",
+      
     }
-}));
+}))
 const allowedOrigins = [
   'http://localhost:3000', // For local development
-  
-   process.env.FRONTEND_URL
+  process.env.FRONTEND_URL 
 ]
 
   cloudinary.config({ 
@@ -57,9 +49,9 @@ app.use(passport.session());
 
 
 app.use(cors({
-  
+    
     origin: function (origin, callback) {
-        
+       
         if (!origin) return callback(null, true);
         if (allowedOrigins.indexOf(origin) === -1) {
             const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
