@@ -38,7 +38,7 @@ function SignUP(event){
 const {mutate,isPending,isError,isSuccess,error}=useMutation({
   mutationFn: async ({username,fullname,password,email})=>{
     try{
-          const res=await fetch("http://localhost:5000/auth/signup",{
+          const res=await fetch("https://tiwiter-done-1.onrender.com/auth/signup",{
             method:"POST",
             headers:{
               "Content-Type":"application/json",

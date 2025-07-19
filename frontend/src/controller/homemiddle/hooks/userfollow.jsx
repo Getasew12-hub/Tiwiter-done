@@ -8,7 +8,7 @@
     mutationFn:async (user)=>{
 
       try{
-       const res=await fetch(`http://localhost:5000/user/folow/${user}`,{
+       const res=await fetch(`https://tiwiter-done-1.onrender.com/user/folow/${user}`,{
         method:"POST",
       
         credentials:"include",

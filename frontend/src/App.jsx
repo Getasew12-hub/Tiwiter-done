@@ -16,7 +16,7 @@ function App() {
   queryKey:["auth"],
   queryFn:async()=>{
     try{
-     const res=await fetch("http://localhost:5000/auth/authUser",{
+     const res=await fetch("https://tiwiter-done-1.onrender.com/auth/authUser",{
       credentials:"include",
 
      })

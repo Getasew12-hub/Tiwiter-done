@@ -34,18 +34,18 @@ function profilePage() {
   const router = () => {
     switch (state) {
       case "post":
-        return "http://localhost:5000/user/userpost";
+        return "https://tiwiter-done-1.onrender.com/user/userpost";
       case "like":
-        return "http://localhost:5000/user/like";
+        return "https://tiwiter-done-1.onrender.com/user/like";
       default:
-        return "http://localhost:5000/user/userpost";
+        return "https://tiwiter-done-1.onrender.com/user/userpost";
     }
   };
 const {data:vals,isLoading:loding}= useQuery({
   queryKey:['fetchPost'],
   queryFn:async()=>{
     try{
-    const respo=await fetch("http://localhost:5000/post/all",{
+    const respo=await fetch("https://tiwiter-done-1.onrender.com/post/all",{
       credentials:"include"
     });
     const responsejson=await respo.json();
@@ -73,7 +73,7 @@ const {data:vals,isLoading:loding}= useQuery({
     queryKey: ["peofile"],
     queryFn: async () => {
       try {
-        const res = await fetch(`http://localhost:5000/user/profile/${user}`, {
+        const res = await fetch(`https://tiwiter-done-1.onrender.com/user/profile/${user}`, {
           credentials: "include",
         });
         const data = await res.json();
@@ -89,7 +89,7 @@ const {data:vals,isLoading:loding}= useQuery({
   const { mutate, isPending } = useMutation({
     mutationFn: async ({ profileimage, coverimage }) => {
       try {
-        const res = await fetch("http://localhost:5000/user/updateImg", {
+        const res = await fetch("https://tiwiter-done-1.onrender.com/user/updateImg", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

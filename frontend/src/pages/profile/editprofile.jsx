@@ -21,7 +21,7 @@ function editprofile() {
 const {mutate,isPending,error}=useMutation({
   mutationFn:async (state) => {
     try {
-      const res=await fetch("http://localhost:5000/user/user",{
+      const res=await fetch("https://tiwiter-done-1.onrender.com/user/user",{
         method:"POST",
         headers:{
           "Content-Type":"application/json",

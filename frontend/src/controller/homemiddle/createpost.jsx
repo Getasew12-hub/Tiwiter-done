@@ -23,7 +23,7 @@ const {mutate,isPending,isError}=useMutation({
   mutationFn:async ({img,text})=>{
     console.log("i am call")
     try{
-     const res=await fetch("http://localhost:5000/post/userpost",{
+     const res=await fetch("https://tiwiter-done-1.onrender.com/post/userpost",{
       method:"POST",
       headers:{
          "Content-Type":"application/json",

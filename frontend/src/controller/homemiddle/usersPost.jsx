@@ -25,7 +25,7 @@ function usersPost(pro) {
     queryKey: ["userLike"],
     queryFn: async () => {
       try {
-        const res = await fetch("http://localhost:5000/post/likepost", {
+        const res = await fetch("https://tiwiter-done-1.onrender.com/post/likepost", {
           credentials: "include",
         });
 
@@ -41,7 +41,7 @@ function usersPost(pro) {
   const { mutate, isPending, isError, Error: DeleteError } = useMutation({
     mutationFn: async (val) => {
       try {
-        const res = await fetch(`http://localhost:5000/post/delete/${val}`, {
+        const res = await fetch(`https://tiwiter-done-1.onrender.com/post/delete/${val}`, {
           method: "DELETE",
           headers: {
             "Content-Type": "application/json",
@@ -71,7 +71,7 @@ function usersPost(pro) {
   } = useMutation({
     mutationFn: async (val) => {
       try {
-        const res = await fetch(`http://localhost:5000/post/like/${val}`, {
+        const res = await fetch(`https://tiwiter-done-1.onrender.com/post/like/${val}`, {
           method: "POST",
           credentials: "include",
         });
@@ -108,7 +108,7 @@ function usersPost(pro) {
     mutationFn:async ({userComment,id})=>{
       
       try{
-  const res=await fetch(`http://localhost:5000/post/comment/${id}`,{
+  const res=await fetch(`https://tiwiter-done-1.onrender.com/post/comment/${id}`,{
     method:"POST",
     headers:{
       "Content-Type":"application/json",

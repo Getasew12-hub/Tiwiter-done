@@ -12,12 +12,12 @@ function middel() {
   const post=()=>{
     switch (state){
       case "for you":
-      return "http://localhost:5000/post/all";
+      return "https://tiwiter-done-1.onrender.com/post/all";
       case "follow":
-        return "http://localhost:5000/post/following";
+        return "https://tiwiter-done-1.onrender.com/post/following";
      
         default :
-       return "http://localhost:5000/post/all";
+       return "https://tiwiter-done-1.onrender.com/post/all";
     }
   }
  
@@ -46,7 +46,7 @@ const {data,isLoading,refetch,isRefetching}= useQuery({
     queryKey: ["followInclud"],
     queryFn: async () => {
       try {
-        const res = await fetch("http://localhost:5000/post/followId", {
+        const res = await fetch("https://tiwiter-done-1.onrender.com/post/followId", {
           credentials: "include",
         });
         const data = await res.json();

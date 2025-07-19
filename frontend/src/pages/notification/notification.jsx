@@ -15,7 +15,7 @@ function notification() {
     queryKey:["notification"],
     queryFn:async ()=>{
       try{
-         const res=await fetch("http://localhost:5000/notification",{
+         const res=await fetch("https://tiwiter-done-1.onrender.com/notification",{
           credentials:"include",
          })
 
@@ -33,7 +33,7 @@ function notification() {
   const {mutate,isPending,}=useMutation({
     mutationFn:async()=>{
       try{
-      const res=await fetch("http://localhost:5000/notification/delete",{
+      const res=await fetch("https://tiwiter-done-1.onrender.com/notification/delete",{
         method:"DELETE",
         credentials:"include"
       })
