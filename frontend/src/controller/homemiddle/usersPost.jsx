@@ -248,7 +248,7 @@ console.log("all post", pro.all);
           )}{" "}
           {pro.all.like && pro.all.like.length}{" "}
         </p>
-        {/* <div className="more">
+        <div className="more">
           <p onClick={Remove}>
             <MoreVertIcon />
           </p>
@@ -264,11 +264,11 @@ console.log("all post", pro.all);
           ) : (
             <p>Loading...</p>
           )}
-        </div> */}
+        </div>
       </div>
      <div className="modal-overlay" ref={Comment}  id={pro.all.id}>
       <div className="comment-containerforuser"   >
-        {/* <div className="discription">
+        <div className="discription">
           <ClearIcon className="clear"onClick={()=> Comment.current.style.visibility="hidden"}/>
         <h1>COMMENTS</h1>
       {pro.all.comment && pro.all.comment.length>0 ? pro.all.comment.map((val,index)=>       <div key={index} className="CommentuserProfile">
@@ -288,22 +288,22 @@ console.log("all post", pro.all);
       </div>): <p>No comment yet😉 Be the first one😊 </p>}
 
 
-        </div> */}
+        </div>
         <div className="form">
           <div className="usercover">
-               {/* <div className="userProfile">
+               <div className="userProfile">
         {data.profileimg ? (
           <img src={data.profileimg} alt="Profile" /> 
         ) : (
           <div className="img">{data.fullname.slice(0, 1)}</div>
-        )} */}
-        {/* <div> */}
-          {/* <p className="name"> */}
-            {/* {data.fullname} <span>{data.username}</span> */}
-          {/* </p> */}
+        )}
+        <div>
+          <p className="name">
+            {data.fullname} <span>{data.username}</span>
+          </p>
           
-        {/* </div> */}
-      {/* </div> */}
+        </div>
+      </div>
            
              </div>
           <form >
