@@ -203,7 +203,7 @@ function usersPost(pro) {
       )}
       <div className="Response">
         <p>
-          <ChatBubbleOutlineIcon style={{cursor:"pointer"}} onClick={()=>CommentShow(pro.all.id)} /> {pro.all.comment.length}
+          <ChatBubbleOutlineIcon style={{cursor:"pointer"}} onClick={()=>CommentShow(pro.all.id)} /> {pro.all.comment && pro.all.comment}
         </p>
 
         <p>
@@ -246,7 +246,7 @@ function usersPost(pro) {
               className="fivorite"
             />
           )}{" "}
-          {pro.all.like.length}{" "}
+          {pro.all.like && pro.all.like.length}{" "}
         </p>
         <div className="more">
           <p onClick={Remove}>
