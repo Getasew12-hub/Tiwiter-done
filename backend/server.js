@@ -29,6 +29,10 @@ app.use(session({
       
     }
 }))
+const allowedOrigins = [
+  'http://localhost:3000', // For local development
+  'https://tiwiter-done-1.onrender.com' 
+]
 
   cloudinary.config({ 
         cloud_name: process.env.CLOUND_NAME, 
@@ -38,9 +42,24 @@ app.use(session({
 
 app.use(passport.initialize());
 app.use(passport.session());
+// app.use(cors({
+//     origin: 'http://localhost:3000', // <--- IMPORTANT: Allow your frontend origin
+//     credentials: true, // <--- Allow cookies/sessions to be sent
+// }));
+
+
 app.use(cors({
-    origin: 'http://localhost:3000', // <--- IMPORTANT: Allow your frontend origin
-    credentials: true, // <--- Allow cookies/sessions to be sent
+  
+    origin: function (origin, callback) {
+        
+        if (!origin) return callback(null, true);
+        if (allowedOrigins.indexOf(origin) === -1) {
+            const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
+            return callback(new Error(msg), false);
+        }
+        return callback(null, true);
+    },
+    credentials: true,
 }));
 
 app.use(express.json({limit:"12mb"}))
