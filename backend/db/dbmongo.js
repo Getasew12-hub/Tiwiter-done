@@ -15,6 +15,9 @@ idleTimeoutMillis:3000,
 
 
 })
-db.connect();
+db.on('error', (err, client) => {
+  console.error('Unexpected error on an idle client in the pool:', err);
+});
+
 
 export default db;
