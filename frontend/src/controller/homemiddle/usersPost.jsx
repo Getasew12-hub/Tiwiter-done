@@ -186,12 +186,12 @@ console.log("all post", pro.all);
         ) : (
           <div className="img">{pro.all.user.fullname.slice(0, 1)}</div>
         )}</NavLink> 
-        {/* <div>
+        <div>
           <p className="name">
             {pro.all.user.fullname} <span>{pro.all.user.username}</span>
           </p>
          
-        </div> */}
+        </div>
         
       </div>
      <div className="postText">  <p>{pro.all.text}</p></div>
