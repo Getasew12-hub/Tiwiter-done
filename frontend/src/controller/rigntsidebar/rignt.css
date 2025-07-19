@@ -1,0 +1,52 @@
+.right-container .user-follow{
+    display: flex;
+    gap: 8px;
+    margin: 10px 0;
+    justify-content: space-between;
+}
+.right-container .user-follow .name{
+    display: flex;
+    gap: 10px;
+}
+.right-container .user-follow img{
+height: 45px;
+width: 45px;
+}
+.right-container .user-follow .name .first{
+    font-weight: bold;
+}
+.right-container .user-follow .name .imgaereplace{
+    height: 40px;
+    width: 40px;
+    background: gray;
+    border-radius: 50%;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+.right-container .user-follow .name .second{
+    color: gray;
+}
+.right-container{
+    background: rgb(24, 23, 23);
+    padding: 10px;
+    margin: 20px;
+    border-radius:5px ;
+  max-width: 350px;
+  min-width: 280px;
+}
+.right-container h2{
+    font-weight: bold;
+    font-size: 18px;
+    
+}
+.user-follow> button{
+    height: 35px;
+    background: white;
+    color: black;
+    font-weight: bold;
+    padding: 0 15px;
+    border-radius: 20px;
+    
+}

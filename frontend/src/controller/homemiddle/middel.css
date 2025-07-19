@@ -1,0 +1,350 @@
+.post-controller .navigation-link a.active {
+  border-bottom: 4px solid dodgerblue;
+  border-radius: 2px;
+  color: white;
+}
+.post-controller .navigation-link a{
+    color: gray;
+}
+#home-controler-middle .post-controller{
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+   height: 100vh;
+   width: 100%;
+   
+   overflow-y: scroll;
+ 
+}
+#home-controler-middle .post-controller::-webkit-scrollbar{
+    display: none;
+ 
+}
+#home-controler-middle .post-controller .navigation-link{
+    display: flex;
+    flex-direction: row;
+   justify-content: space-evenly;
+   border-bottom:1px solid gray ;
+   margin: 0;
+}
+#home-controler-middle .post-controller .navigation-link a{
+    padding: 10px 0;
+    font-weight: bold;
+}
+.create-post{
+    border-bottom: 1px solid gray;
+    padding: 10px;
+}
+#home-controler{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+  
+    
+   
+}
+.createpost-con .createpost img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+.createpost-con .createpost{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    /* font-weight: bold; */
+    font-size: 18px;
+    align-items: flex-start;
+
+}
+.createpost-con .createpost .replaceimg{
+     width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: green;
+    font-weight: bold;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+.createpost-con .createpost textarea{
+    background: none;
+    border: none;
+    outline: none;
+    width: 90%;
+   min-height: 70px !important;
+    resize: none;
+}
+.createpost-con .createpost textarea::-webkit-scrollbar{
+  background-color: dodgerblue;
+  width: 5px;
+   border-radius: 15px;
+}
+.createpost-con .createpost textarea::-webkit-scrollbar-thumb{
+  background: white;
+  border-radius: 15px;
+}
+.post-apploader {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid gray;
+    margin: 20px auto 0;
+    padding: 10px 0;
+    color:dodgerblue;
+}
+.post-apploader button{
+    background: dodgerblue;
+    color: white;
+    padding: 0 15px;
+    border-radius: 20px;
+    border: 0;
+}
+.post-apploader .take-image .image{
+    cursor: pointer;
+}
+.createpost-con .diplayimg img{
+max-width:100% ;
+  max-height: 200px;
+  box-sizing: border-box;
+  margin: 10px auto;
+}
+.createpost-con .diplayimg{
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+}
+.createpost-con .diplayimg .clear{
+   position: absolute;
+   top: 0;
+   right: -15px;
+   font-size: 25px;
+   background: rgb(5, 5, 5,0.5);
+   cursor: pointer;
+}
+ .createpost-con  .displayajust{
+    text-align: center;
+ }
+ .allPosts-container .userProfile img, .allPosts-container .userProfile .img{
+       height: 40px;
+       width: 40px;
+       border-radius: 50%;
+ }
+ .allPosts-container .userProfile .img{
+    background: darkgreen;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    font-weight: bold;
+    font-size: 23px;
+    
+ }
+
+ .allPosts-container .userProfile{
+      display: inline-flex;
+      gap: 10px;
+ }
+ .allPosts-container .userProfile div .name{
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0 0 10px;
+ }
+  .allPosts-container .userProfile div .name span{
+    color: gray;
+    font-weight: normal;
+    font-size: 14px;
+  }
+  .allPosts-container{
+    padding: 15px;
+    border-bottom:1px solid gray ;
+   
+    position: relative;
+  }
+  .allPosts-container  .PostImag{
+    width: 95%;
+  display: inline-block;
+    border: 1px solid gray;
+    padding: 0 10px;
+    border-radius: 10px;
+    overflow: hidden;
+   height: 100%;
+    margin: 10px 0 10px 5% ;
+    display: flex;
+    justify-content: center;
+  }
+ .allPosts-container .PostImag img{
+    
+  max-height:450px;  
+   
+   }
+    .allPosts-container .Response{
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0 0 40px ;
+
+    }
+    .allPosts-container .Response *{
+        color: gray;
+    }
+    .allPosts-container .Response .fivorite{
+        cursor: pointer !important;
+        
+    }
+    .allPosts-container .Response p .white{
+        fill: white !important;
+        cursor: pointer !important;
+    }
+     .allPosts-container .Response .more{
+        cursor: pointer;
+        position: relative;
+     }
+     .allPosts-container .Response .more .delete{
+        position: absolute;
+        font-size: 14px;
+        top: -19px;
+        left: -15px;
+        background: rgb(37, 28, 28);
+        padding: 0 4px;
+     }
+     .diplayNot{
+        display: none;
+     }
+    .notfound{
+        font-weight: bold;
+        margin: 10px 0;
+        text-align: center;
+    }
+    .modal-overlay{
+      
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgb(0,0,0,0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      visibility:hidden;
+      z-index: 10000;
+    }
+    .comment-containerforuser{
+       position: relative;
+        background: black;
+        z-index: 1000;
+        padding: 0 10px 10px ;
+        width: 500px;
+        bottom:20px ;
+        border-radius: 10px;
+        border:1px solid gray ;
+        
+    }
+    .comment-containerforuser>.discription{
+        border-bottom: 1px solid gray;
+        padding: 35px 0 10px;
+        overflow-x: hidden;
+       max-height: 65vh;
+       overflow-y: auto;
+    }
+    .comment-containerforuser>.discription::-webkit-scrollbar{
+     
+      background: dodgerblue;
+      width: 5px;
+        border-radius: 10px;
+    }
+     .comment-containerforuser>.discription::-webkit-scrollbar-thumb{
+      background: gray;
+      border-radius: 10px ;
+      
+     }
+   .comment-containerforuser>.discription .clear{
+        color: dodgerblue;
+        margin-bottom: 10px;
+        position: absolute;
+        background: black;
+        cursor: pointer;
+        font-size: 30px;
+        top: 0px;
+   }
+     .comment-containerforuser>.discription h1{
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom:10px;
+     }
+      .comment-containerforuser>.discription p{
+        color: gray;
+      }
+      .comment-containerforuser >.form .usercover{
+        margin: 10px;
+      }
+      .comment-containerforuser >.form form {
+        color: white;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+      .comment-containerforuser >.form form textarea{
+        background: black;
+        border: 1px solid gray;
+        width: 100%;
+        padding: 20px ;
+        border-radius: 10px;
+        resize: none;
+      }
+      .comment-containerforuser >.form form textarea::-webkit-scrollbar{
+        display: none;
+      }
+      .comment-containerforuser >.form form textarea:-webkit-autofill{
+        -webkit-box-shadow:0 0 0 0 1000px inset black;
+        -webkit-text-fill-color: white;
+      }
+      .comment-containerforuser >.form form button{
+        color: white;
+        background: dodgerblue;
+        height: 30px;
+        width: 100px;
+        font-weight: bold;
+        border-radius: 25px;
+         border: none;
+
+      }
+      .CommentuserProfile{
+         border-bottom:1px solid gray ;
+          margin: 10px;
+          
+      }
+      .CommentuserProfile .forSidebyside{
+        display: flex;
+        gap: 10px;
+       
+       
+      }
+      .CommentuserProfile .forSidebyside .img,.CommentuserProfile img{
+        height: 40px;
+        width: 40px;
+        background: darkgreen;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 20px;
+      }
+      .CommentuserProfile .forSidebyside .commentname{
+        color: white !important ;
+        font-weight: bold;
+        margin-bottom:10px ;
+        white-space:wrap;
+        box-sizing: border-box;
+      }
+       .CommentuserProfile .forSidebyside .commentname span{
+        color: gray;
+        font-weight: normal;
+       }
+        .CommentuserProfile .text{
+          color: white !important;
+          margin-left: 50px;
+          white-space:wrap;
+          box-sizing: border-box;
+        }
+        .postText{
+          margin: 10px 10px 10px 30px;
+        }

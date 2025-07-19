@@ -1,0 +1,138 @@
+.left-sidebar{
+
+    
+    position: relative;
+    display: flex;
+    justify-content:flex-end;
+     overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    padding: 10px 50px 0 0;
+
+}
+.xicon{
+    font-size: 55px !important;
+}
+.navigation-link{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 30px 0;
+    justify-content: flex-end;
+    border:none;
+}
+
+.navigation-link p{
+    font-weight: bold;
+    white-space: nowrap;
+    word-spacing: 5px;
+    font-size: 18px;
+}
+.navigation-link p .icon{
+    font-size: 35px;
+}
+.left-sidebar div .user {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    
+
+}
+.left-sidebar div .user .userloggin{
+    display: flex;
+    gap: 8px;
+}
+.left-sidebar div .user .userloggin img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+.left-sidebar div .user .userloggin .imagereplace{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background: darkgreen;
+    font-weight: bold;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+}
+.user div p:nth-of-type(2){
+    color: gray;
+}
+.logout-container> .logout:hover +p {
+   display: block;
+}
+.logout-container{
+    position: relative;
+    display: inline-block;
+}
+.logout-container> p{
+    position: absolute;
+    top: -18px;
+    left: -15px;
+    white-space: nowrap;
+    background: rgb(46, 45, 45);
+    padding: 0px 3px;
+    border-radius: 4px;
+    font-size: 12px;
+    display: none;
+}
+.logout-container> .logout{
+    transform: rotate(180deg);
+    cursor: pointer;
+}
+.navigation-link .noti-unread{
+    position: relative;
+    display: inline-block;
+}
+.navigation-link .noti-unread .unread{
+    color: white;
+    position: absolute;
+    top: -5px;
+    left: 18px;
+    z-index: 100;
+
+    font-size: 18px;
+    height: 25px;
+    width: 25px;
+    background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+ 
+}
+@media(max-width:1200px){
+    .left-sidebar{
+          padding: 10px 5px 0 10px;
+    }
+    .left-sidebar div .user{
+     flex-direction: column;
+    
+    
+
+}
+}
+@media(max-width:1000px){
+    .left-sidebar{
+          padding: 10px 20px 0 10px;
+    }
+}
+@media(max-width:490px){
+    .left-sidebar .navigation-link{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+        width: 100%;
+        background: rgb(128, 128, 128,0.5);
+        z-index: 1000;
+        margin: 0;
+    }
+
+}

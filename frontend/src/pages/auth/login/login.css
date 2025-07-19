@@ -1,0 +1,83 @@
+.home-container-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     height: 100vh;
+     gap: 100px;
+     width: 700px;
+     margin: 0 auto;
+   
+     padding: 0 5px;
+}
+.home-container-input .form{
+    width: 100%;
+}
+.home-container-input .form h2{
+    font-weight: bold;
+    font-size:30px ;
+    margin: 20px 0;
+}
+
+.home-container-input .form  form div input{
+  background: transparent;
+  margin: 10px 0;
+  width: 100%;
+  border: 1px solid gray;
+  padding: 10px 10px 10px 40px;
+  border-radius: 5px;
+  outline: none;
+
+}
+
+.home-container-input .form  form div Input:-webkit-autofill
+ {
+    -webkit-box-shadow: 0 0 0px 1000px black inset !important;
+    -webkit-text-fill-color: white !important;
+    background-color: transparent !important; 
+    caret-color: white !important;
+    
+}
+
+.home-container-input .form  form div{
+    position: relative;
+}
+.home-container-input .form  form div label{
+      position: absolute;
+      top: 20px;
+      left: 5px;
+}
+.signup{
+    border: 1px solid dodgerblue;
+    background: dodgerblue;
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.signin{
+    border: 1px solid dodgerblue;
+    padding: 10px;
+    width: 100%;
+    color: dodgerblue;
+    font-weight: bold;
+    border-radius: 20px;
+    margin-top:10px ;
+}
+.signin:hover{
+    background: dodgerblue;
+    color: white;
+}
+.xiconsignup{
+    font-size: 200px !important;
+}
+@media(max-width:1000px){
+   .home-container-input{
+    flex-direction: column;
+    max-width: 400px;
+    gap: 20px;
+   } 
+  .home-container-input .xiconsignup{
+    font-size: 70px !important;
+}
+}

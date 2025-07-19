@@ -1,0 +1,80 @@
+.notification-container{
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    height: 100vh;
+    overflow-y: scroll;
+   box-sizing: border-box;
+   
+}
+.notification-container::-webkit-scrollbar{
+    display: none;
+}
+.notification-container .notication-delete{
+    border-bottom: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.notification-container .notication-delete p{
+   font-weight: bold;
+   font-size: 20px;
+}
+.notification-container .notication-delete .setting{
+    color: gray;
+    cursor: pointer;
+}
+.notification-container .notication-delete div{
+    position: relative;
+}
+.notification-container .notication-delete div p{
+    font-weight: normal;
+    font-size: 12px;
+    position: absolute;
+    white-space: nowrap;
+   right: -10px;
+   bottom: -25px;
+   background:rgb(128, 128, 128,0.5);
+   padding:2px 5px;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+}
+.notification-container div .notification-follow img,
+.notification-container div .notification-like img
+{
+     height: 40px;
+     width: 40px;
+     border-radius: 50%;
+}
+.notification-container div .notification-like .profile,
+.notification-container div .notification-follow .profile{
+    display: flex;
+    gap: 10px;
+    margin: 0 0 10px;
+}
+.notification-container div .notification-like .profile .icon,
+.notification-container div .notification-follow .profile .icon{
+       font-size: 40px;
+}
+.notification-container div .notification-follow .profile .icon{
+color: dodgerblue;
+}
+.notification-container div .notification-like .profile .icon{
+    color: red;
+}
+.notification-container div .notification-like,
+.notification-container div .notification-follow{
+    border-bottom: 1px solid gray;
+    padding: 20px;
+}
+.notification-container div .notification-like p,
+.notification-container div .notification-follow p{
+  font-weight: bold;
+  font-size: 18px;
+}
+.notification-container div .notification-like p span,
+.notification-container div .notification-follow p span{
+    color: gray;
+    font-weight: normal;
+}
