@@ -12,7 +12,7 @@ import { Auth } from "../queryFn/queryFn";
 
 
 function usersPost(pro) {
-
+console.log("all post", pro.all);
   const [sttate, setState] = useState(true);
   const Comment=useRef()
   const [secondState, secondSetState] = useState(false);
@@ -271,7 +271,7 @@ function usersPost(pro) {
         <div className="discription">
           <ClearIcon className="clear"onClick={()=> Comment.current.style.visibility="hidden"}/>
         <h1>COMMENTS</h1>
-      {pro.all.comment.length>0 ? pro.all.comment.map((val,index)=>       <div key={index} className="CommentuserProfile">
+      {pro.all.comment && pro.all.comment.length>0 ? pro.all.comment.map((val,index)=>       <div key={index} className="CommentuserProfile">
         <div className="forSidebyside">
         {val.profileimg ? (
           <img src={val.profileimg} alt="Profile" style={{background:"transparent"}} /> 
