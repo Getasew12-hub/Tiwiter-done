@@ -186,27 +186,27 @@ console.log("all post", pro.all);
         ) : (
           <div className="img">{pro.all.user.fullname.slice(0, 1)}</div>
         )}</NavLink> 
-        <div>
+        {/* <div>
           <p className="name">
             {pro.all.user.fullname} <span>{pro.all.user.username}</span>
           </p>
          
-        </div>
+        </div> */}
         
       </div>
      <div className="postText">  <p>{pro.all.text}</p></div>
-      {pro.all.img && (
-        <div className="PostImag">
-          <img src={pro.all.img} alt="Post" />{" "}
-          {/* Added alt prop for accessibility */}
-        </div>
-      )}
+      {/* {pro.all.img && ( */}
+        // <div className="PostImag">
+        //   <img src={pro.all.img} alt="Post" />{" "}
+        //   {/* Added alt prop for accessibility */}
+        // </div>
+      {/* // )} */}
       <div className="Response">
-        <p>
+        {/* <p>
           <ChatBubbleOutlineIcon style={{cursor:"pointer"}} onClick={()=>CommentShow(pro.all.id)} /> {pro.all.comment && pro.all.comment}
-        </p>
+        </p> */}
 
-        <p>
+        {/* <p>
           {UserLike?.includes(pro.all.id) ? ( // Added optional chaining for UserLike
             sttate ? (
               <FavoriteIcon
@@ -247,8 +247,8 @@ console.log("all post", pro.all);
             />
           )}{" "}
           {pro.all.like && pro.all.like.length}{" "}
-        </p>
-        <div className="more">
+        </p> */}
+        {/* <div className="more">
           <p onClick={Remove}>
             <MoreVertIcon />
           </p>
@@ -264,7 +264,7 @@ console.log("all post", pro.all);
           ) : (
             <p>Loading...</p>
           )}
-        </div>
+        </div> */}
       </div>
      <div className="modal-overlay" ref={Comment}  id={pro.all.id}>
       <div className="comment-containerforuser"   >
