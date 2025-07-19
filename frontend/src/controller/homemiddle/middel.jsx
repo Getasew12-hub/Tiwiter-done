@@ -61,6 +61,7 @@ const {data,isLoading,refetch,isRefetching}= useQuery({
 useEffect(()=>{
    refetch()
 },[state])
+ {console.log("data length",data)}
 if(isLoading || isRefetching || comming) return <div style={{height:"100vh",display:"flex",alignItems:"center",justifyContent:"center"}}><Loading /></div>
 
   return (
@@ -79,7 +80,7 @@ if(isLoading || isRefetching || comming) return <div style={{height:"100vh",disp
       <Createpost />
       
      </div>
-     {console.log("data length",data)}
+    
      
    
      <div className="posts">
