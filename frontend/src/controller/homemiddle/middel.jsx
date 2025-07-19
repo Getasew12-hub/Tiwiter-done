@@ -63,7 +63,7 @@ useEffect(()=>{
 },[state])
  
 if(isLoading || isRefetching || comming) return <div style={{height:"100vh",display:"flex",alignItems:"center",justifyContent:"center"}}><Loading /></div>
-{console.log("data length",data)}
+{console.log("data length",data.length)}
   return (
        <div  id='home-controler-middle'>
        
