@@ -19,19 +19,20 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
   const app=express();
 // const __dirname=path.resolve();
 app.use(session({
-    secret:"TOPSECTER",
+    secret:"TOPSECTER", // <-- Still hardcoded, should be process.env.SESSION_SECRET
     resave:false,
     saveUninitialized:false,
     name:"usercome",
     cookie:{
         maxAge:24*15*60*60*1000,
         path:"/",
-      
+        // secure and sameSite are MISSING here
     }
 }))
 const allowedOrigins = [
   'http://localhost:3000', // For local development
-  'https://tiwiter-done-1.onrender.com' 
+  
+   process.env.FRONTEND_URL
 ]
 
   cloudinary.config({ 
