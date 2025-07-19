@@ -10,7 +10,7 @@ function rignt() {
     queryKey:["suggest"],
     queryFn:async ()=>{
       try{
-   const res=await fetch("http://localhost:5000/user/suggest",{
+   const res=await fetch("https://tiwiter-done-1.onrender.com/user/suggest",{
     credentials:"include",
    });
 

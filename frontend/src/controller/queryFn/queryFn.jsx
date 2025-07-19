@@ -1,6 +1,6 @@
 export const  Auth=async()=>{
     try{
-     const res=await fetch("http://localhost:5000/auth/authUser",{
+     const res=await fetch("https://tiwiter-done-1.onrender.com/auth/authUser",{
       credentials:"include",
 
      })
@@ -33,7 +33,7 @@ export const FeachPost=async()=>{
 
   export const Follow= async () => {
       try {
-        const res = await fetch("http://localhost:5000/post/followId", {
+        const res = await fetch("https://tiwiter-done-1.onrender.com/post/followId", {
           credentials: "include",
         });
         const data = await res.json();

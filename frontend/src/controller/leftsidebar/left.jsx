@@ -19,7 +19,7 @@ function rightsidebar() {
 const size=window.innerWidth;
 const {mutate,isPending,error}=useMutation({
   mutationFn:async()=>{
-  try{  const res=await fetch("http://localhost:5000/auth/logout",{
+  try{  const res=await fetch("https://tiwiter-done-1.onrender.com/auth/logout",{
    method:"POST",
    credentials:"include",
     })
@@ -41,7 +41,7 @@ const {data:unread,isLoading}=useQuery({
   queryKey:["unreadNoti"],
   queryFn:async()=>{
     try{
-     const res=await fetch("http://localhost:5000/notification/unread",{
+     const res=await fetch("https://tiwiter-done-1.onrender.com/notification/unread",{
       credentials:"include"
      })
      const data=await res.json();
@@ -61,7 +61,7 @@ const {mutate:notificatio,isPending:Pending}=useMutation({
   mutationFn:async ()=>{
     
     try{
-    const res=await fetch("http://localhost:5000/notification/update",{
+    const res=await fetch("https://tiwiter-done-1.onrender.com/notification/update",{
       method:"POST",
       credentials:"include",
     })
