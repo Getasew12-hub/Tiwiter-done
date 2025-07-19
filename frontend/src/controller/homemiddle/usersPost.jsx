@@ -202,11 +202,11 @@ console.log("all post", pro.all);
         </div>
       )}
       <div className="Response">
-        {/* <p>
-          <ChatBubbleOutlineIcon style={{cursor:"pointer"}} onClick={()=>CommentShow(pro.all.id)} /> {pro.all.comment && pro.all.comment}
-        </p> */}
+        <p>
+          <ChatBubbleOutlineIcon style={{cursor:"pointer"}} onClick={()=>CommentShow(pro.all.id)} /> {pro.all.comment && pro.all.comment.length}
+        </p>
 
-        {/* <p>
+        <p>
           {UserLike?.includes(pro.all.id) ? ( // Added optional chaining for UserLike
             sttate ? (
               <FavoriteIcon
@@ -247,7 +247,7 @@ console.log("all post", pro.all);
             />
           )}{" "}
           {pro.all.like && pro.all.like.length}{" "}
-        </p> */}
+        </p>
         {/* <div className="more">
           <p onClick={Remove}>
             <MoreVertIcon />
