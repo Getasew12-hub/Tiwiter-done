@@ -9,10 +9,15 @@ import { v2 as cloudinary } from 'cloudinary';
 import postRouter from "./routers/postRouter.js"
 import notificationRouter from "./routers/noti.Router.js"
 import cors from "cors"
+ import { dirname } from "path";
+import { fileURLToPath } from "url";
+import path from "path";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
   env.config();
   const app=express();
-
+// const __dirname=path.resolve();
 app.use(session({
     secret:"TOPSECTER",
     resave:false,
@@ -45,6 +50,17 @@ app.use("/auth",authRouter);
 app.use("/user",userRouter);
 app.use("/post",postRouter)
 app.use("/notification",notificationRouter)
+
+
+
+if(process.env.NODE_ENV==="production"){
+   
+    app.use(express.static(path.join(__dirname, '..', "frontend", "dist")));
+
+    app.use((req, res) => {
+        res.sendFile(path.join(__dirname,"..", 'frontend', 'dist', 'index.html'));
+    });
+}
 passport.serializeUser((user,cb)=>{
     cb(null,user);
 })
