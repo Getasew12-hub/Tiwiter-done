@@ -61,9 +61,9 @@ const {data,isLoading,refetch,isRefetching}= useQuery({
 useEffect(()=>{
    refetch()
 },[state])
- {console.log("data length",data)}
+ 
 if(isLoading || isRefetching || comming) return <div style={{height:"100vh",display:"flex",alignItems:"center",justifyContent:"center"}}><Loading /></div>
-
+{console.log("data length",data)}
   return (
        <div  id='home-controler-middle'>
        
@@ -83,11 +83,11 @@ if(isLoading || isRefetching || comming) return <div style={{height:"100vh",disp
     
      
    
-     <div className="posts">
+     {/* <div className="posts">
       {data.map((val,index)=>
             <UsersPost key={index} all={val} state={state}/>
             )}
-     </div>
+     </div> */}
      </div>
  
     </div>
